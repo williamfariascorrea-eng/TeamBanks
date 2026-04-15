@@ -1,36 +1,37 @@
 # TeamBanks - Consultoria Fitness Premium
 
-Este repositório contém o código-fonte da Landing Page oficial do **TeamBanks**, uma consultoria fitness de elite focada em performance e acompanhamento personalizado.
+Este repositorio contem o codigo-fonte da landing page oficial do **TeamBanks**.
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias
 
-- **HTML5 & CSS3** (Custom Properties, Glassmorphism)
-- **Tailwind CSS** (Design responsivo e utilitário)
-- **JavaScript** (Manipulação de DOM e animações)
-- **AOS (Animate On Scroll)** (Efeitos de entrada dinâmicos)
-- **FontAwesome** (Ícones minimalistas)
+- HTML5 e CSS3
+- Tailwind CSS via CDN
+- JavaScript
+- AOS
+- Font Awesome
 
-## 💎 Diferenciais do Projeto
+## Deploy no Render
 
-- **Visual Dark Premium:** Estética moderna utilizando tons de azul gelo e transparências.
-- **Menu Pill Style:** Navegação interativa com efeitos de vidro lapidado.
-- **Responsividade Total:** Adaptado para dispositivos móveis, tablets e desktops.
-- **Performance Otimizada:** Manipulação de scroll utilizando `requestAnimationFrame`.
+O projeto esta configurado para **Render Static Site** com o arquivo [render.yaml](/C:/Users/ubr1/Documents/Banks/render.yaml:1).
 
-##  Deploy no Render
+### Blueprint
 
-Para colocar o site online:
+1. Publique este repositorio no GitHub.
+2. No Render, clique em **New > Blueprint**.
+3. Selecione o repositorio.
+4. O Render vai aplicar o `render.yaml` automaticamente.
 
-### Opção A: Static Site (Melhor Performance)
-1. No Dashboard do Render, clique em **New > Static Site**.
-2. Conecte seu repositório GitHub.
-3. **Build Command:** Deixe vazio.
-4. **Publish Directory:** `.`
+### Configuracao manual
 
-### Opção B: Web Service (Python)
-1. No Dashboard do Render, clique em **New > Web Service**.
-2. **Runtime:** Python.
-3. **Start Command:** `python server.py`.
+Se preferir criar manualmente um Static Site no Render:
 
----
-Desenvolvido com foco em conversão e autoridade de marca.
+1. Clique em **New > Static Site**.
+2. Conecte o repositorio GitHub.
+3. Use `Build Command` vazio.
+4. Use `Publish Directory` igual a `.`
+
+## Observacoes
+
+- O deploy na Render nao precisa do `server.py`.
+- O `server.py` pode continuar no projeto apenas para uso local.
+- **Seguran&ccedil;a (SSL/HTTPS):** O Render configura automaticamente certificados SSL e redireciona todo o tr&aacute;fego HTTP para HTTPS por padr&atilde;o.

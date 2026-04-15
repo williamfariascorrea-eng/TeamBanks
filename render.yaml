@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: teambanks
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .
