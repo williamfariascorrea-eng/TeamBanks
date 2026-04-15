@@ -2,5 +2,6 @@ services:
   - type: web
     name: teambanks
     runtime: static
-    buildCommand: ""
-    staticPublishPath: .
+    plan: free
+    buildCommand: echo "Static site ready"
+    staticPublishPath: ./
