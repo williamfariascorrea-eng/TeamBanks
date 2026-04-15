@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    color-scheme: dark;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #030712;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes pulse-soft {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.02); }
+}
+
+h1, h2, h3, .brand-display {
+    letter-spacing: -0.02em;
+}
+
+.hero-mesh {
+    background:
+        radial-gradient(circle at 10% 10%, rgba(125, 211, 252, 0.05), transparent 40%),
+        radial-gradient(circle at 90% 90%, rgba(56, 189, 248, 0.05), transparent 40%),
+        linear-gradient(180deg, #030712 0%, #050b18 100%);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: 
+        radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.28), transparent 18%, transparent 82%, rgba(0, 0, 0, 0.28));
+    opacity: 0.35;
+    z-index: -1;
+}
+
+.glass-card,
+.feature-card,
+.consult-card,
+.pricing-card,
+.showcase-panel {
+    background: linear-gradient(165deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.02), 0 20px 40px -20px rgba(0,0,0,0.7);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card,
+.feature-card,
+.consult-card,
+.pricing-card {
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.glass-card:hover,
+.feature-card:hover,
+.consult-card:hover,
+.pricing-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(125, 211, 252, 0.3);
+    background: linear-gradient(165deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 15px rgba(125, 211, 252, 0.1);
+}
+
+.showcase-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(135deg, rgba(125, 211, 252, 0.08), transparent 35%),
+        linear-gradient(320deg, rgba(14, 165, 233, 0.12), transparent 38%);
+    pointer-events: none;
+}
+
+.example-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.example-media {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: transparent;
+}
+
+.example-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-shell {
+    overflow: hidden;
+}
+
+.carousel-viewport {
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.38s ease;
+    will-change: transform;
+}
+
+.carousel-dot {
+    width: 2rem;
+    height: 2px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.25s ease;
+}
+
+.carousel-dot.is-active {
+    width: 3rem;
+    background: #7dd3fc;
+    box-shadow: 0 0 10px rgba(125, 211, 252, 0.3);
+}
+
+.section-kicker {
+    letter-spacing: 0.28em;
+    font-size: 0.72rem;
+}
+
+.muted-copy {
+    color: rgb(191 204 220);
+}
+
+.faq-item.active {
+    border-color: rgba(125, 211, 252, 0.45);
+    box-shadow: 0 12px 50px rgba(125, 211, 252, 0.08);
+}
+
+.faq-item.active .faq-trigger i {
+    transform: rotate(45deg);
+}
+
+.faq-content {
+    transition: max-height 0.35s ease;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #060c15;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(125, 211, 252, 0.3);
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(125, 211, 252, 0.5);
+}
+
+.mobile-link {
+    transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .showcase-panel,
+    .glass-card,
+    .feature-card,
+    .consult-card,
+    .pricing-card {
+        border-radius: 1.5rem;
+    }
+
+    .example-media {
+        aspect-ratio: 9 / 13;
+    }
+}

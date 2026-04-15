@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinador Banks | Consultoria Personalizada</title>
+    <meta name="description" content="Consultoria fitness premium com o Treinador Banks. Metodologia elite para resultados reais e acompanhamento personalizado.">
+    <meta property="og:title" content="TeamBanks | Consultoria Fitness de Elite">
+    <meta property="og:description" content="Transforme seu corpo com estratégia de elite e suporte personalizado.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#030712">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        "brand-black": "#07111f",
+                        "brand-deep": "#0e1b31",
+                        "brand-line": "#1d3355",
+                        "brand-ice": "#7dd3fc",
+                        "brand-soft": "#d8f3ff"
+                    },
+                    boxShadow: {
+                        premium: "0 20px 50px -12px rgba(0, 0, 0, 0.5)",
+                        softGlow: "0 0 40px rgba(125, 211, 252, 0.08)",
+                        brand: "0 0 20px rgba(125, 211, 252, 0.2)"
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="bg-[#030712] text-white antialiased overflow-x-hidden font-sans">
+    <div class="fixed inset-0 -z-10">
+        <div class="absolute inset-0 hero-mesh"></div>
+        <div class="absolute left-1/2 top-0 h-[40rem] w-[40rem] -translate-x-1/2 rounded-full bg-brand-ice/5 blur-[120px]"></div>
+        <div class="absolute bottom-0 right-0 h-[30rem] w-[30rem] rounded-full bg-cyan-600/5 blur-[120px]"></div>
+    </div>
+
+    <nav id="main-nav" class="fixed top-0 z-[100] w-full border-b border-white/5 bg-[#030712]/60 backdrop-blur-2xl transition-all duration-500">
+        <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-5">
+            <a href="#home" class="text-xl font-extrabold uppercase tracking-[0.3em] sm:text-2xl bg-gradient-to-r from-brand-ice to-white bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(125,211,252,0.3)]">
+                TeamBanks
+            </a>
+
+            <div class="hidden items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 backdrop-blur-md md:flex">
+                <a href="#home" class="rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 transition-all hover:bg-brand-ice hover:text-brand-black">In&iacute;cio</a>
+                <a href="#metodo" class="rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 transition-all hover:bg-brand-ice hover:text-brand-black">M&eacute;todo</a>
+                <a href="#consultoria" class="rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 transition-all hover:bg-brand-ice hover:text-brand-black">Consultoria</a>
+                <a href="#planos" class="rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 transition-all hover:bg-brand-ice hover:text-brand-black">Planos</a>
+                <a href="#faq" class="rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 transition-all hover:bg-brand-ice hover:text-brand-black">FAQ</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/5553999134166" target="_blank" class="hidden shrink-0 rounded-full bg-brand-ice px-6 py-2.5 text-xs font-bold uppercase tracking-[0.15em] text-brand-black transition-all hover:scale-105 hover:shadow-brand animate-pulse-slow sm:block sm:text-sm">
+                    WhatsApp
+                </a>
+                
+                <!-- Botão Menu Mobile -->
+                <button id="mobile-menu-toggle" class="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white transition-all active:scale-90 md:hidden">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Mobile Overlay -->
+        <div id="mobile-menu" class="absolute left-0 top-full w-full border-b border-white/5 bg-[#030712]/95 p-8 backdrop-blur-2xl transition-all duration-300 opacity-0 pointer-events-none -translate-y-4 md:hidden">
+            <div class="flex flex-col gap-8 text-center text-[11px] font-bold uppercase tracking-[0.3em] text-slate-400">
+                <a href="#home" class="mobile-link py-2">In&iacute;cio</a>
+                <a href="#metodo" class="mobile-link py-2">M&eacute;todo</a>
+                <a href="#consultoria" class="mobile-link py-2">Consultoria</a>
+                <a href="#planos" class="mobile-link py-2">Planos</a>
+                <a href="#faq" class="mobile-link py-2">FAQ</a>
+                <a href="https://wa.me/5553999134166" class="mt-2 rounded-xl bg-brand-ice py-4 text-brand-black">WhatsApp</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="px-6 pb-32 pt-44 md:pb-40 md:pt-52">
+            <div class="mx-auto grid max-w-7xl items-start gap-12 xl:gap-16 lg:grid-cols-[minmax(0,1.15fr)_22rem] xl:grid-cols-[minmax(0,1.1fr)_24rem]">
+                <div data-aos="fade-up">
+                    <span class="inline-flex rounded-full border border-brand-ice/20 bg-brand-ice/5 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.25em] text-brand-ice">
+                        Consultoria fitness personalizada
+                    </span>
+                    <h1 class="mt-8 max-w-[15ch] text-5xl font-extrabold uppercase leading-[0.9] tracking-tighter sm:text-6xl md:text-7xl xl:text-[5.5rem]">
+                        Transforme seu corpo com 
+                        <span class="block bg-gradient-to-r from-brand-ice to-white bg-clip-text text-transparent italic">estrat&eacute;gia de elite.</span>
+                    </h1>
+                    <p class="mt-8 max-w-xl text-base leading-relaxed text-slate-400 md:text-lg">
+                        M&eacute;todo focado em resultados reais atrav&eacute;s de acompanhamento individualizado e ci&ecirc;ncia aplicada ao treinamento.
+                    </p>
+
+                    <div class="mt-10 flex flex-col gap-5 sm:flex-row">
+                        <a href="https://wa.me/5553999134166" target="_blank" class="rounded-xl bg-brand-ice px-8 py-4 text-center text-xs font-bold uppercase tracking-[0.15em] text-brand-black transition-all hover:-translate-y-1 hover:shadow-glow sm:text-sm">
+                            Quero minha consultoria
+                        </a>
+                        <a href="#consultoria" class="rounded-xl border border-white/10 bg-white/5 px-8 py-4 text-center text-xs font-bold uppercase tracking-[0.15em] text-white transition-all hover:bg-white/10 sm:text-sm">
+                            Ver detalhes
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="relative lg:ml-auto lg:w-full lg:max-w-[24rem]" data-aos="fade-left">
+                    <div class="absolute inset-0 rounded-[2rem] bg-brand-ice/15 blur-3xl"></div>
+                    <div class="showcase-panel relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/5 p-6 backdrop-blur-md md:p-8">
+                        <div class="flex items-center justify-between gap-4 mb-8">
+                            <p class="text-[11px] font-bold uppercase tracking-[0.25em] text-brand-ice">O que o aluno encontra</p>
+                            <span class="rounded-full border border-brand-ice/30 bg-brand-ice/10 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.15em] text-brand-ice">
+                                Team Banks
+                            </span>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="group rounded-2xl border border-white/5 bg-white/5 p-5 transition-all hover:bg-white/10">
+                                <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">01. Diagn&oacute;stico</p>
+                                <p class="mt-2 text-lg font-bold uppercase leading-tight group-hover:text-brand-ice transition-colors">An&aacute;lise da rotina, objetivo e fase atual.</p>
+                            </div>
+                            <div class="group rounded-2xl border border-white/5 bg-white/5 p-5 transition-all hover:bg-white/10">
+                                <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">02. Estrutura</p>
+                                <p class="mt-2 text-lg font-bold uppercase leading-tight group-hover:text-brand-ice transition-colors">Treino organizado e ajustado para a sua realidade.</p>
+                            </div>
+                            <div class="group rounded-2xl border border-white/5 bg-white/5 p-5 transition-all hover:bg-white/10">
+                                <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">03. Acompanhamento</p>
+                                <p class="mt-2 text-lg font-bold uppercase leading-tight group-hover:text-brand-ice transition-colors">Suporte para corrigir, ajustar e continuar evoluindo.</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 grid grid-cols-2 gap-4">
+                            <div class="rounded-xl border border-white/5 bg-white/5 p-4">
+                                <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-ice/70">Entrega</p>
+                                <p class="mt-2 text-xs font-bold leading-relaxed text-slate-300">Suporte e personaliza&ccedil;&atilde;o total</p>
+                            </div>
+                            <div class="rounded-xl border border-white/5 bg-white/5 p-4">
+                                <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-ice/70">Formato</p>
+                                <p class="mt-2 text-xs font-bold leading-relaxed text-slate-300">Online e presencial para objetivos diferentes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="border-y border-white/5 bg-white/[0.02] px-6 py-12">
+            <div class="mx-auto grid max-w-7xl grid-cols-2 gap-y-10 gap-x-4 text-center md:grid-cols-4 lg:grid-cols-7">
+                <div data-aos="fade-up">
+                    <i class="fas fa-history mb-4 block text-[12px] text-brand-ice/40"></i>
+                    <p class="text-2xl font-extrabold text-brand-ice tracking-tight md:text-3xl">10 anos</p>
+                    <p class="mt-2 text-[9px] font-bold uppercase tracking-[0.2em] text-slate-500">Experi&ecirc;ncia</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-id-card mb-4 block text-[12px] text-brand-ice/40"></i>
+                    <p class="text-2xl font-extrabold text-white tracking-tight md:text-3xl">CREF</p>
+                    <p class="mt-2 text-[9px] font-bold uppercase tracking-[0.2em] text-slate-500">Credibilidade</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-star mb-4 block text-[12px] text-brand-ice/40"></i>
+                    <p class="text-2xl font-extrabold text-white tracking-tight md:text-3xl">100%</p>
+                    <p class="mt-2 text-[9px] font-bold uppercase tracking-[0.2em] text-slate-500">Exclusivo</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-headset mb-4 block text-[12px] text-brand-ice/40"></i>
+                    <p class="text-2xl font-extrabold text-brand-ice tracking-tight md:text-3xl">Full</p>
+                    <p class="mt-2 text-[9px] font-bold uppercase tracking-[0.2em] text-slate-500">Suporte</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-flask mb-4 block text-[12px] text-brand-ice/40"></i>
+                    <p class="text-2xl font-extrabold text-white tracking-tight md:text-3xl">Metodologia</p>
+                    <p class="mt-2 text-[9px] font-bold uppercase tracking-[0.2em] text-slate-500">ELITE</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="500">
+                    <i class="fas fa-comments mb-4 block text-[12px] text-brand-ice/40"></i>
+                    <p class="text-2xl font-extrabold text-white tracking-tight md:text-3xl">Acesso</p>
+                    <p class="mt-2 text-[9px] font-bold uppercase tracking-[0.2em] text-slate-500">Direto</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="600">
+                    <i class="fas fa-trophy mb-4 block text-[12px] text-brand-ice/40"></i>
+                    <p class="text-2xl font-extrabold text-brand-ice tracking-tight md:text-3xl">Resultado</p>
+                    <p class="mt-2 text-[9px] font-bold uppercase tracking-[0.2em] text-slate-500">Garantido</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="metodo" class="px-6 py-32 md:py-40">
+            <div class="mx-auto max-w-7xl">
+                <div class="max-w-3xl" data-aos="fade-up">
+                    <span class="inline-flex items-center gap-2 rounded-full border border-brand-ice/20 bg-brand-ice/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-brand-ice">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-ice opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-ice"></span>
+                        </span>
+                        M&eacute;todo Banks
+                    </span>
+                    <h2 class="mt-4 text-3xl font-black uppercase leading-tight md:text-5xl">
+                        Sua evolu&ccedil;&atilde;o baseada em 
+                        <span class="block text-brand-ice">dados e consist&ecirc;ncia.</span>
+                    </h2>
+                    <p class="muted-copy mt-5 max-w-2xl text-base leading-7 md:text-lg">
+                        A consultoria &eacute; baseada em personaliza&ccedil;&atilde;o, suporte e acompanhamento integral.
+                        Cada etapa foi pensada para deixar o aluno seguro no processo e consistente na execu&ccedil;&atilde;o.
+                    </p>
+                </div>
+
+                <div class="mt-12 grid gap-5 lg:grid-cols-3">
+                    <article class="feature-card rounded-[1.8rem] p-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-ice/10 text-brand-ice">
+                            <i class="fas fa-clipboard-list text-base"></i>
+                        </div>
+                        <h3 class="text-xl font-black uppercase">Treino personalizado</h3>
+                        <p class="muted-copy mt-3 text-[15px] leading-7">
+                            O plano nasce da sua rotina, do seu objetivo e da sua fase atual. N&atilde;o &eacute; planilha gen&eacute;rica.
+                        </p>
+                    </article>
+
+                    <article class="feature-card rounded-[1.8rem] p-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-ice/10 text-brand-ice">
+                            <i class="fas fa-comments text-base"></i>
+                        </div>
+                        <h3 class="text-xl font-black uppercase">Suporte ilimitado</h3>
+                        <p class="muted-copy mt-3 text-[15px] leading-7">
+                            O aluno n&atilde;o recebe s&oacute; o treino. Ele tem acesso para tirar d&uacute;vidas, alinhar execu&ccedil;&atilde;o e corrigir rota.
+                        </p>
+                    </article>
+
+                    <article class="feature-card rounded-[1.8rem] p-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-ice/10 text-brand-ice">
+                            <i class="fas fa-chart-line text-base"></i>
+                        </div>
+                        <h3 class="text-xl font-black uppercase">Acompanhamento integral</h3>
+                        <p class="muted-copy mt-3 text-[15px] leading-7">
+                            A proposta agora mostra continuidade, ajuste e evolu&ccedil;&atilde;o. Isso passa mais valor do que um banner com muito texto.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="exemplos" class="px-6 py-32 md:py-40 bg-gradient-to-b from-transparent via-white/[0.02] to-transparent">
+            <div class="mx-auto max-w-7xl">
+                <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between" data-aos="fade-up">
+                    <div class="max-w-3xl">
+                        <span class="section-kicker font-semibold uppercase text-brand-ice">Exemplos reais</span>
+                        <h2 class="mt-4 text-3xl font-black uppercase leading-tight md:text-5xl">
+                            Materiais que refor&ccedil;am
+                            <span class="block text-brand-ice">na pr&aacute;tica.</span>
+                        </h2>
+                        <p class="muted-copy mt-5 max-w-2xl text-base leading-7 md:text-lg">
+                            Alguns exemplos visuais da consultoria para apresentar a proposta, os planos e o posicionamento da marca.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative mt-20 flex justify-center" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Glow decorativo atrás do carrossel -->
+                    <div class="absolute left-1/2 top-1/2 -z-10 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-ice/20 blur-[100px]"></div>
+                    
+                    <div class="w-full max-w-4xl">
+                        <div class="carousel-shell group relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#030712]/50 backdrop-blur-md shadow-2xl">
+                            <!-- Botões de Navegação Laterais -->
+                            <button type="button" id="examples-prev" class="absolute left-4 top-[40%] z-30 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-white/40 backdrop-blur-md border border-white/10 transition-all hover:bg-brand-ice/20 hover:text-brand-ice hover:scale-110 active:scale-95 md:left-6">
+                                <i class="fas fa-chevron-left text-xs"></i>
+                            </button>
+                            <button type="button" id="examples-next" class="absolute right-4 top-[40%] z-30 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-white/40 backdrop-blur-md border border-white/10 transition-all hover:bg-brand-ice/20 hover:text-brand-ice hover:scale-110 active:scale-95 md:right-6">
+                                <i class="fas fa-chevron-right text-xs"></i>
+                            </button>
+
+                            <div class="carousel-viewport">
+                                <div class="carousel-track" id="examples-track">
+                                    <figure class="example-card min-w-full relative">
+                                        <div class="example-media aspect-video p-4 md:p-8">
+                                            <img src="Fotos/Captura de tela 2026-04-14 202608.png" alt="Exemplo 1" class="h-full w-full object-contain">
+                                        </div>
+                                        <div class="bg-white/5 border-t border-white/5 p-6 flex items-center justify-between">
+                                            <div>
+                                            <p class="text-[10px] font-bold uppercase tracking-widest text-brand-ice">Interface</p>
+                                            <p class="mt-1 text-sm font-bold uppercase">Estrutura da oferta</p>
+                                        </div>
+                                        </div>
+                                    </figure>
+                                    <figure class="example-card min-w-full relative">
+                                        <div class="example-media aspect-video p-4 md:p-8">
+                                            <img src="Fotos/Captura de tela 2026-04-14 202617.png" alt="Exemplo 2" class="h-full w-full object-contain">
+                                        </div>
+                                        <div class="bg-white/5 border-t border-white/5 p-6 flex items-center justify-between">
+                                            <div>
+                                            <p class="text-[10px] font-bold uppercase tracking-widest text-brand-ice">Planos</p>
+                                            <p class="mt-1 text-sm font-bold uppercase">Investimento</p>
+                                        </div>
+                                        </div>
+                                    </figure>
+                                    <figure class="example-card min-w-full relative">
+                                        <div class="example-media aspect-video p-4 md:p-8">
+                                            <img src="Fotos/Captura de tela 2026-04-14 202730.png" alt="Exemplo 3" class="h-full w-full object-contain">
+                                        </div>
+                                        <div class="bg-white/5 border-t border-white/5 p-6 flex items-center justify-between">
+                                            <div>
+                                            <p class="text-[10px] font-bold uppercase tracking-widest text-brand-ice">Visual</p>
+                                            <p class="mt-1 text-sm font-bold uppercase">Apoio e suporte</p>
+                                        </div>
+                                        </div>
+                                    </figure>
+                                    <figure class="example-card min-w-full relative">
+                                        <div class="example-media aspect-video p-4 md:p-8">
+                                            <img src="Fotos/Captura de tela 2026-04-14 202737.png" alt="Exemplo 4" class="h-full w-full object-contain">
+                                        </div>
+                                        <div class="bg-white/5 border-t border-white/5 p-6 flex items-center justify-between">
+                                            <div>
+                                            <p class="text-[10px] font-bold uppercase tracking-widest text-brand-ice">Marca</p>
+                                            <p class="mt-1 text-sm font-bold uppercase">Posicionamento</p>
+                                        </div>
+                                        </div>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 flex items-center justify-center gap-6">
+                            <div id="examples-dots" class="flex items-center gap-2">
+                                <div class="carousel-dot is-active"></div>
+                                <div class="carousel-dot"></div>
+                                <div class="carousel-dot"></div>
+                                <div class="carousel-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="consultoria" class="px-6 py-32 md:py-40">
+            <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+                <div data-aos="fade-right">
+                    <span class="inline-flex rounded-full border border-brand-ice/20 bg-brand-ice/5 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.25em] text-brand-ice">Como funciona</span>
+                    <h2 class="mt-4 text-3xl font-black uppercase leading-tight md:text-5xl">
+                        A consultoria
+                        <span class="block text-brand-ice">fica &agrave; mostra.</span>
+                    </h2>
+                    <p class="muted-copy mt-5 max-w-xl text-base leading-7 md:text-lg">
+                        O visitante entende em poucos segundos o passo a passo do servi&ccedil;o e o que est&aacute; contratando.
+                    </p>
+
+                    <div class="mt-8 space-y-4">
+                        <div class="glass-card rounded-[1.6rem] p-5">
+                            <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-brand-ice">Etapa 1</p>
+                            <h3 class="mt-2 text-xl font-black uppercase">Avalia&ccedil;&atilde;o inicial</h3>
+                            <p class="muted-copy mt-3 text-[15px] leading-7">Levantamento de metas, rotina, hist&oacute;rico e necessidades para definir a dire&ccedil;&atilde;o correta.</p>
+                        </div>
+                        <div class="glass-card rounded-[1.6rem] p-5">
+                            <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-brand-ice">Etapa 2</p>
+                            <h3 class="mt-2 text-xl font-black uppercase">Plano individual</h3>
+                            <p class="muted-copy mt-3 text-[15px] leading-7">Treino organizado para o seu contexto, com clareza do que fazer e como evoluir.</p>
+                        </div>
+                        <div class="glass-card rounded-[1.6rem] p-5">
+                            <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-brand-ice">Etapa 3</p>
+                            <h3 class="mt-2 text-xl font-black uppercase">Suporte e ajustes</h3>
+                            <p class="muted-copy mt-3 text-[15px] leading-7">Contato para corre&ccedil;&otilde;es, d&uacute;vidas e continuidade do acompanhamento.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid gap-6 sm:grid-cols-2" data-aos="fade-left">
+                    <article class="consult-card rounded-[1.8rem] p-6 sm:col-span-2">
+                        <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                            <div>
+                                <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-brand-ice">Formato principal</p>
+                                <h3 class="mt-2 text-2xl font-black uppercase">Consultoria online</h3>
+                            </div>
+                            <div class="rounded-full border border-brand-ice/30 bg-brand-ice/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.24em] text-brand-ice">
+                                30 dias de acompanhamento
+                            </div>
+                        </div>
+                        <p class="muted-copy mt-5 max-w-2xl text-[15px] leading-7">
+                            Ideal para quem quer treinar com estrat&eacute;gia, suporte direto e personaliza&ccedil;&atilde;o total, mesmo sem atendimento presencial.
+                        </p>
+                        <div class="mt-8 grid gap-4 md:grid-cols-2">
+                            <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+                                <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-brand-soft">Inclui</p>
+                                <p class="mt-2 text-base font-bold">Suporte ilimitado e organiza&ccedil;&atilde;o completa do treino</p>
+                            </div>
+                            <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+                                <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-brand-soft">Opcional</p>
+                                <p class="mt-2 text-base font-bold">Chamada de v&iacute;deo aos s&aacute;bados por R$ 100,00</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="consult-card rounded-[1.8rem] p-6">
+                        <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-brand-ice">Formato local</p>
+                        <h3 class="mt-2 text-xl font-black uppercase">Personal presencial</h3>
+                        <p class="muted-copy mt-4 text-[15px] leading-7">Para quem quer acompanhamento ao vivo com frequ&ecirc;ncia definida por semana.</p>
+                        <ul class="muted-copy mt-6 space-y-3 text-xs uppercase tracking-[0.16em]">
+                            <li>2x por semana - R$ 400,00</li>
+                            <li>3x por semana - R$ 500,00</li>
+                            <li>4x por semana - R$ 600,00</li>
+                            <li>5x por semana - R$ 700,00</li>
+                        </ul>
+                    </article>
+
+                    <article class="consult-card rounded-[1.8rem] p-6">
+                        <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-brand-ice">Diferencial</p>
+                        <h3 class="mt-2 text-xl font-black uppercase">Oferta clara e premium</h3>
+                        <p class="muted-copy mt-4 text-[15px] leading-7">
+                            Os benef&iacute;cios da consultoria aparecem com clareza, sem poluir a tela. Isso melhora leitura e passa mais profissionalismo.
+                        </p>
+                        <div class="mt-6 rounded-2xl border border-brand-ice/20 bg-brand-ice/10 p-4">
+                            <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-brand-soft">B&ocirc;nus comercial</p>
+                            <p class="mt-2 text-base font-bold">Indique 3 alunos e ganhe sua consulta gratuitamente.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="planos" class="px-6 py-32 md:py-40">
+            <div class="mx-auto max-w-7xl">
+                <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between" data-aos="fade-up">
+                    <div class="max-w-3xl">
+                        <span class="section-kicker font-semibold uppercase text-brand-ice">Planos de investimento</span>
+                        <h2 class="mt-4 text-3xl font-black uppercase leading-tight md:text-5xl">
+                            Valores apresentados
+                            <span class="block text-brand-ice">como produto de alto n&iacute;vel.</span>
+                        </h2>
+                    </div>
+                    <a href="https://wa.me/5553999134166" target="_blank" class="rounded-full border border-white/10 bg-white/5 px-6 py-3 text-xs font-black uppercase tracking-[0.2em] text-white transition hover:border-brand-ice/40 hover:text-brand-ice sm:text-sm">
+                        Solicitar vaga
+                    </a>
+                </div>
+
+                <div class="mt-16 grid gap-6 lg:grid-cols-4">
+                    <article class="pricing-card rounded-[1.8rem] p-6" data-aos="fade-up" data-aos-delay="100">
+                        <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-slate-400">Mensal</p>
+                        <p class="brand-display mt-4 text-4xl font-black">R$ 200</p>
+                        <p class="muted-copy mt-3 text-[15px] leading-7">30 dias de acompanhamento online.</p>
+                    </article>
+                    <article class="pricing-card rounded-[1.8rem] p-6" data-aos="fade-up" data-aos-delay="200">
+                        <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-slate-400">Trimestral</p>
+                        <p class="brand-display mt-4 text-4xl font-black">R$ 450</p>
+                        <p class="muted-copy mt-3 text-[15px] leading-7">Mais continuidade com economia no per&iacute;odo.</p>
+                    </article>
+                    <article class="pricing-card rounded-[1.8rem] p-6" data-aos="fade-up" data-aos-delay="300">
+                        <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-slate-400">Semestral</p>
+                        <p class="brand-display mt-4 text-4xl font-black">R$ 850</p>
+                        <p class="muted-copy mt-3 text-[15px] leading-7">Formato para quem quer consolidar resultado com ajuste constante.</p>
+                    </article>
+                    <article class="pricing-card relative overflow-hidden rounded-[1.8rem] p-6 border-brand-ice/50 ring-2 ring-brand-ice/20 shadow-brand" data-aos="fade-up" data-aos-delay="400">
+                        <div class="absolute -right-4 -top-4 rounded-bl-xl bg-brand-ice px-4 py-2 text-[10px] font-bold uppercase text-brand-black">Popular</div>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-brand-ice">Anual</p>
+                        <p class="brand-display mt-4 text-4xl font-black">R$ 2.000</p>
+                        <p class="muted-copy mt-3 text-[15px] leading-7">Plano premium para compromisso de longo prazo.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="px-6 py-20 md:py-24">
+            <div class="mx-auto max-w-5xl">
+                <div class="text-center" data-aos="fade-up">
+                    <span class="section-kicker font-semibold uppercase text-brand-ice">FAQ</span>
+                    <h2 class="mt-4 text-3xl font-black uppercase md:text-5xl">D&uacute;vidas frequentes</h2>
+                </div>
+
+                <div class="mt-10 space-y-4">
+                    <div class="faq-item overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5" data-aos="fade-up" data-aos-delay="100">
+                        <button class="faq-trigger flex w-full items-center justify-between px-8 py-6 text-left">
+                            <span class="text-base font-black uppercase md:text-lg">Como funciona a consultoria online?</span>
+                            <i class="fas fa-plus text-brand-ice transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden">
+                            <div class="muted-copy px-8 pb-6 text-[15px] leading-7">
+                                O aluno passa objetivo e rotina, recebe um plano individual e segue com suporte para ajustes e acompanhamento.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5" data-aos="fade-up" data-aos-delay="200">
+                        <button class="faq-trigger flex w-full items-center justify-between px-8 py-6 text-left">
+                            <span class="text-base font-black uppercase md:text-lg">&Eacute; s&oacute; para aluno avan&ccedil;ado?</span>
+                            <i class="fas fa-plus text-brand-ice transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden">
+                            <div class="muted-copy px-8 pb-6 text-[15px] leading-7">
+                                N&atilde;o. A proposta atende iniciante, intermedi&aacute;rio e aluno que j&aacute; treina, desde que exista compromisso com a execu&ccedil;&atilde;o.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5" data-aos="fade-up" data-aos-delay="300">
+                        <button class="faq-trigger flex w-full items-center justify-between px-8 py-6 text-left">
+                            <span class="text-base font-black uppercase md:text-lg">Tem personal presencial?</span>
+                            <i class="fas fa-plus text-brand-ice transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden">
+                            <div class="muted-copy px-8 pb-6 text-[15px] leading-7">
+                                Sim. O site mostra tamb&eacute;m os formatos presenciais com frequ&ecirc;ncia semanal e faixa de investimento mensal.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/5" data-aos="fade-up" data-aos-delay="400">
+                        <button class="faq-trigger flex w-full items-center justify-between px-8 py-6 text-left">
+                            <span class="text-base font-black uppercase md:text-lg">O que diferencia esse servi&ccedil;o?</span>
+                            <i class="fas fa-plus text-brand-ice transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden">
+                            <div class="muted-copy px-8 pb-6 text-[15px] leading-7">
+                                Personaliza&ccedil;&atilde;o, suporte, leitura da rotina do aluno e um site que comunica isso com clareza logo na primeira dobra.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a href="https://wa.me/5553999134166" target="_blank" class="fixed bottom-6 right-6 z-[100] flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-3xl text-white shadow-[0_14px_34px_rgba(37,211,102,0.35)] transition hover:scale-110">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer class="border-t border-white/10 px-6 pb-10 pt-14">
+        <div class="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
+            <div>
+                <p class="text-xl font-extrabold uppercase tracking-[0.3em] sm:text-2xl bg-gradient-to-r from-brand-ice to-white bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(125,211,252,0.35)]">TeamBanks</p>
+                <p class="muted-copy mt-3 max-w-xl text-sm leading-7">
+                    Consultoria personalizada com foco em performance, clareza no processo e acompanhamento de verdade.
+                </p>
+            </div>
+            <div class="flex gap-4 text-xs uppercase tracking-[0.2em] text-slate-400 sm:text-sm">
+                <a href="#consultoria" class="transition hover:text-brand-ice">Consultoria</a>
+                <a href="#planos" class="transition hover:text-brand-ice">Planos</a>
+                <a href="https://www.instagram.com/treinador.banks/" target="_blank" class="transition hover:text-brand-ice">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
