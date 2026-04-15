@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+﻿document.addEventListener('DOMContentLoaded', function () {
     if (window.AOS) {
         AOS.init({
             duration: 900,
@@ -123,3 +123,4 @@ document.addEventListener('DOMContentLoaded', function () {
         renderSlide();
     }
 });
+
