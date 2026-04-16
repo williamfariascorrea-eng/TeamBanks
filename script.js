@@ -116,9 +116,8 @@
     if (videos.length) {
         const stopVideo = (video) => {
             video.pause();
-            if (video.currentTime > 0) {
-                video.currentTime = 0;
-            }
+            video.currentTime = 0;
+            video.load();
         };
 
         if ('IntersectionObserver' in window) {
