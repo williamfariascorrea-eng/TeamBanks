@@ -4,6 +4,7 @@
     color-scheme: dark;
 }
 
+/* Base */
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: #030712;
@@ -40,6 +41,7 @@ body {
     object-fit: cover;
 }
 
+/* Motion */
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-10px); }
@@ -55,6 +57,7 @@ h1, h2, h3, .brand-display {
     letter-spacing: -0.02em;
 }
 
+/* Background */
 .hero-mesh {
     background:
         radial-gradient(circle at 10% 10%, rgba(125, 211, 252, 0.05), transparent 40%),
@@ -75,6 +78,7 @@ body::before {
     z-index: -1;
 }
 
+/* Shared cards */
 .glass-card,
 .feature-card,
 .consult-card,
@@ -105,6 +109,7 @@ body::before {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 15px rgba(125, 211, 252, 0.1);
 }
 
+/* Media blocks */
 .showcase-panel::before {
     content: "";
     position: absolute;
@@ -186,6 +191,7 @@ body::before {
     filter: saturate(1.02) contrast(1.04);
 }
 
+/* Brand banner */
 .cta-banner {
     background:
         radial-gradient(circle at left center, rgba(125, 211, 252, 0.14), transparent 28%),
@@ -201,6 +207,7 @@ body::before {
     object-position: center;
 }
 
+/* Hidden gallery support */
 .example-card {
     display: flex;
     flex-direction: column;
@@ -294,6 +301,7 @@ body::before {
     transition: color 0.3s ease;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
     nav > div {
         padding-left: 1rem !important;

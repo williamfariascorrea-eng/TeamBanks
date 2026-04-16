@@ -1,8 +1,8 @@
 import http.server
-import socketserver
 import os
+import socketserver
 
-# O Render define automaticamente a variável de ambiente PORT
+# Servidor local simples para visualizar o site sem Browser Sync.
 PORT = int(os.environ.get("PORT", 3000))
 HANDLER = http.server.SimpleHTTPRequestHandler
 
@@ -13,4 +13,4 @@ with socketserver.TCPServer(("0.0.0.0", PORT), HANDLER) as httpd:
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:
-        print("\nServidor encerrado pelo usuário.")
+        print("\nServidor encerrado pelo usuario.")
