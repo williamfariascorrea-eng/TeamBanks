@@ -65,6 +65,7 @@
             <div class="hidden items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 backdrop-blur-md md:flex">
                 <a href="#home" class="rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 transition-all hover:bg-brand-ice hover:text-brand-black">In&iacute;cio</a>
                 <a href="#metodo" class="rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 transition-all hover:bg-brand-ice hover:text-brand-black">M&eacute;todo</a>
+                <a href="#resultados" class="rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 transition-all hover:bg-brand-ice hover:text-brand-black">Resultados</a>
                 <a href="#consultoria" class="rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 transition-all hover:bg-brand-ice hover:text-brand-black">Consultoria</a>
                 <a href="#planos" class="rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 transition-all hover:bg-brand-ice hover:text-brand-black">Planos</a>
                 <a href="#faq" class="rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 transition-all hover:bg-brand-ice hover:text-brand-black">FAQ</a>
@@ -87,6 +88,7 @@
             <div class="flex flex-col gap-8 text-center text-[11px] font-bold uppercase tracking-[0.3em] text-slate-400">
                 <a href="#home" class="mobile-link py-2">In&iacute;cio</a>
                 <a href="#metodo" class="mobile-link py-2">M&eacute;todo</a>
+                <a href="#resultados" class="mobile-link py-2">Resultados</a>
                 <a href="#consultoria" class="mobile-link py-2">Consultoria</a>
                 <a href="#planos" class="mobile-link py-2">Planos</a>
                 <a href="#faq" class="mobile-link py-2">FAQ</a>
@@ -123,7 +125,7 @@
                     <div class="hero-video-card relative mt-10 overflow-hidden rounded-[2rem] border border-white/10 p-4 md:p-5" data-aos="fade-up" data-aos-delay="150">
                         <div class="absolute inset-0 bg-gradient-to-r from-brand-ice/10 via-transparent to-cyan-500/10 pointer-events-none"></div>
                         <div class="hero-video-shell relative overflow-hidden rounded-[1.6rem]">
-                            <video class="hero-video block w-full" controls playsinline preload="none" poster="media/poster-video-2.png">
+                            <video class="hero-video block w-full" controls playsinline preload="none" poster="media/poster-video-2.png" data-stop-offscreen>
                                 <source src="media/video-hero-extra.mp4" type="video/mp4">
                                 Seu navegador n&atilde;o suporta v&iacute;deo em HTML5.
                             </video>
@@ -244,7 +246,7 @@
                     <div class="absolute inset-0 bg-gradient-to-br from-brand-ice/10 via-transparent to-cyan-500/10 pointer-events-none"></div>
                     <div class="relative grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_18rem] lg:items-center">
                         <div class="method-video-shell overflow-hidden rounded-[1.6rem]">
-                            <video class="method-video block w-full" controls playsinline preload="none" poster="media/poster-video-1.png">
+                            <video class="method-video block w-full" controls playsinline preload="none" poster="media/poster-video-1.png" data-stop-offscreen>
                                 <source src="media/Metodo.mp4" type="video/mp4">
                                 Seu navegador n&atilde;o suporta v&iacute;deo em HTML5.
                             </video>
@@ -306,93 +308,86 @@
             </div>
         </section>
 
-        <!-- Hidden gallery block kept for future reuse -->
-        <section id="exemplos" class="hidden px-6 py-32 md:py-40 bg-gradient-to-b from-transparent via-white/[0.02] to-transparent">
+        <!-- Results -->
+        <section id="resultados" class="px-6 py-32 md:py-40 bg-gradient-to-b from-transparent via-white/[0.02] to-transparent">
             <div class="mx-auto max-w-7xl">
-                <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between" data-aos="fade-up">
-                    <div class="max-w-3xl">
-                        <span class="section-kicker font-semibold uppercase text-brand-ice">Exemplos reais</span>
-                        <h2 class="mt-4 text-3xl font-black uppercase leading-tight md:text-5xl">
-                            Materiais que refor&ccedil;am
-                            <span class="block text-brand-ice">na pr&aacute;tica.</span>
-                        </h2>
-                        <p class="muted-copy mt-5 max-w-2xl text-base leading-7 md:text-lg">
-                            Alguns exemplos visuais da consultoria para apresentar a proposta, os planos e o posicionamento da marca.
-                        </p>
-                    </div>
+                <div class="text-center" data-aos="fade-up">
+                    <span class="section-kicker font-semibold uppercase text-brand-ice">Resultados do m&eacute;todo</span>
+                    <h2 class="mt-4 text-3xl font-black uppercase leading-tight md:text-5xl">
+                        Evolu&ccedil;&otilde;es reais
+                        <span class="block text-brand-ice">de quem entrou no processo.</span>
+                    </h2>
+                    <p class="muted-copy mx-auto mt-5 max-w-3xl text-base leading-7 md:text-lg">
+                        Uma aba pensada para mostrar, de forma limpa e centralizada, o impacto do acompanhamento na pr&aacute;tica. As imagens ficam completas, sem corte, e com o mesmo peso visual dos v&iacute;deos.
+                    </p>
                 </div>
 
-                <div class="relative mt-20 flex justify-center" data-aos="fade-up" data-aos-delay="100">
-                    <!-- Glow decorativo atrás do carrossel -->
-                    <div class="absolute left-1/2 top-1/2 -z-10 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-ice/20 blur-[100px]"></div>
-                    
-                    <div class="w-full max-w-4xl">
-                        <div class="carousel-shell group relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#030712]/50 backdrop-blur-md shadow-2xl">
-                            <!-- Botões de Navegação Laterais -->
-                            <button type="button" id="examples-prev" class="absolute left-4 top-[40%] z-30 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-white/40 backdrop-blur-md border border-white/10 transition-all hover:bg-brand-ice/20 hover:text-brand-ice hover:scale-110 active:scale-95 md:left-6">
-                                <i class="fas fa-chevron-left text-xs"></i>
-                            </button>
-                            <button type="button" id="examples-next" class="absolute right-4 top-[40%] z-30 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-white/40 backdrop-blur-md border border-white/10 transition-all hover:bg-brand-ice/20 hover:text-brand-ice hover:scale-110 active:scale-95 md:right-6">
-                                <i class="fas fa-chevron-right text-xs"></i>
-                            </button>
+                <div class="result-showcase mx-auto mt-16 max-w-6xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="result-highlight rounded-[2rem] p-6 md:p-8">
+                        <div class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+                            <div>
+                                <span class="inline-flex rounded-full border border-brand-ice/20 bg-brand-ice/10 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.24em] text-brand-ice">
+                                    Antes e depois reais
+                                </span>
+                                <h3 class="mt-5 text-2xl font-black uppercase leading-tight md:text-4xl">
+                                    O resultado aparece
+                                    <span class="block text-brand-ice">quando o m&eacute;todo encontra const&acirc;ncia.</span>
+                                </h3>
+                                <p class="muted-copy mt-5 max-w-xl text-[15px] leading-7 md:text-base">
+                                    Cada transforma&ccedil;&atilde;o abaixo representa acompanhamento, ajuste fino e execu&ccedil;&atilde;o s&eacute;ria. A proposta aqui &eacute; deixar essa prova social forte, elegante e bem encaixada no site.
+                                </p>
+                            </div>
 
-                            <div class="carousel-viewport">
-                                <div class="carousel-track" id="examples-track">
-                                    <figure class="example-card min-w-full relative">
-                                        <div class="example-media aspect-video p-4 md:p-8">
-                                            <img src="Fotos/Captura de tela 2026-04-14 202608.png" alt="Exemplo 1" class="h-full w-full object-contain">
+                            <figure class="result-card result-card-featured result-carousel-card">
+                                <div class="result-frame result-carousel-frame">
+                                    <button type="button" id="results-prev" class="result-arrow result-arrow-prev" aria-label="Imagem anterior">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </button>
+                                    <button type="button" id="results-next" class="result-arrow result-arrow-next" aria-label="Pr&oacute;xima imagem">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                    <div class="result-carousel-viewport">
+                                        <div class="result-carousel-track" id="results-track">
+                                            <div class="result-media is-square result-slide">
+                                                <img src="media/resultados/resultado-01.png" alt="Resultado real 1 do m&eacute;todo Banks">
+                                            </div>
+                                            <div class="result-media is-square result-slide">
+                                                <img src="media/resultados/resultado-02.png" alt="Resultado real 2 do m&eacute;todo Banks">
+                                            </div>
+                                            <div class="result-media is-square result-slide">
+                                                <img src="media/resultados/resultado-03.png" alt="Resultado real 3 do m&eacute;todo Banks">
+                                            </div>
+                                            <div class="result-media is-square result-slide">
+                                                <img src="media/resultados/resultado-04.png" alt="Comparativo de resultado de aluno do m&eacute;todo Banks">
+                                            </div>
+                                            <div class="result-media is-square result-slide">
+                                                <img src="media/resultados/resultado-05.png" alt="Resultado real 5 do m&eacute;todo Banks">
+                                            </div>
+                                            <div class="result-media is-square result-slide">
+                                                <img src="media/resultados/resultado-06.png" alt="Resultado real 6 do m&eacute;todo Banks">
+                                            </div>
+                                            <div class="result-media is-square result-slide">
+                                                <img src="media/resultados/resultado-07.png" alt="Resultado real 7 do m&eacute;todo Banks">
+                                            </div>
+                                            <div class="result-media is-square result-slide">
+                                                <img src="media/resultados/resultado-08.png" alt="Resultado real 8 do m&eacute;todo Banks">
+                                            </div>
+                                            <div class="result-media is-square result-slide">
+                                                <img src="media/resultados/resultado-09.png" alt="Resultado real 9 do m&eacute;todo Banks">
+                                            </div>
+                                            <div class="result-media is-square result-slide">
+                                                <img src="media/resultados/resultado-10.png" alt="Resultado real 10 do m&eacute;todo Banks">
+                                            </div>
                                         </div>
-                                        <div class="bg-white/5 border-t border-white/5 p-6 flex items-center justify-between">
-                                            <div>
-                                            <p class="text-[10px] font-bold uppercase tracking-widest text-brand-ice">Interface</p>
-                                            <p class="mt-1 text-sm font-bold uppercase">Estrutura da oferta</p>
-                                        </div>
-                                        </div>
-                                    </figure>
-                                    <figure class="example-card min-w-full relative">
-                                        <div class="example-media aspect-video p-4 md:p-8">
-                                            <img src="Fotos/Captura de tela 2026-04-14 202617.png" alt="Exemplo 2" class="h-full w-full object-contain">
-                                        </div>
-                                        <div class="bg-white/5 border-t border-white/5 p-6 flex items-center justify-between">
-                                            <div>
-                                            <p class="text-[10px] font-bold uppercase tracking-widest text-brand-ice">Planos</p>
-                                            <p class="mt-1 text-sm font-bold uppercase">Investimento</p>
-                                        </div>
-                                        </div>
-                                    </figure>
-                                    <figure class="example-card min-w-full relative">
-                                        <div class="example-media aspect-video p-4 md:p-8">
-                                            <img src="Fotos/Captura de tela 2026-04-14 202730.png" alt="Exemplo 3" class="h-full w-full object-contain">
-                                        </div>
-                                        <div class="bg-white/5 border-t border-white/5 p-6 flex items-center justify-between">
-                                            <div>
-                                            <p class="text-[10px] font-bold uppercase tracking-widest text-brand-ice">Visual</p>
-                                            <p class="mt-1 text-sm font-bold uppercase">Apoio e suporte</p>
-                                        </div>
-                                        </div>
-                                    </figure>
-                                    <figure class="example-card min-w-full relative">
-                                        <div class="example-media aspect-video p-4 md:p-8">
-                                            <img src="Fotos/Captura de tela 2026-04-14 202737.png" alt="Exemplo 4" class="h-full w-full object-contain">
-                                        </div>
-                                        <div class="bg-white/5 border-t border-white/5 p-6 flex items-center justify-between">
-                                            <div>
-                                            <p class="text-[10px] font-bold uppercase tracking-widest text-brand-ice">Marca</p>
-                                            <p class="mt-1 text-sm font-bold uppercase">Posicionamento</p>
-                                        </div>
-                                        </div>
-                                    </figure>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-8 flex items-center justify-center gap-6">
-                            <div id="examples-dots" class="flex items-center gap-2">
-                                <div class="carousel-dot is-active"></div>
-                                <div class="carousel-dot"></div>
-                                <div class="carousel-dot"></div>
-                                <div class="carousel-dot"></div>
-                            </div>
+                                <figcaption class="result-caption">
+                                    <div>
+                                        <p class="result-label">Resultado em destaque</p>
+                                        <p class="result-title">Transforma&ccedil;&atilde;o com acompanhamento</p>
+                                    </div>
+                                </figcaption>
+                            </figure>
                         </div>
                     </div>
                 </div>
@@ -626,6 +621,7 @@
                 </p>
             </div>
             <div class="flex gap-4 text-xs uppercase tracking-[0.2em] text-slate-400 sm:text-sm">
+                <a href="#resultados" class="transition hover:text-brand-ice">Resultados</a>
                 <a href="#consultoria" class="transition hover:text-brand-ice">Consultoria</a>
                 <a href="#planos" class="transition hover:text-brand-ice">Planos</a>
                 <a href="https://www.instagram.com/treinador.banks/" target="_blank" class="transition hover:text-brand-ice">Instagram</a>

@@ -87,40 +87,70 @@
         });
     });
 
-    const track = document.getElementById('examples-track');
-    const prevButton = document.getElementById('examples-prev');
-    const nextButton = document.getElementById('examples-next');
-    const dots = Array.from(document.querySelectorAll('.carousel-dot'));
+    const videos = Array.from(document.querySelectorAll('video[data-stop-offscreen]'));
+    const resultsTrack = document.getElementById('results-track');
+    const resultsPrev = document.getElementById('results-prev');
+    const resultsNext = document.getElementById('results-next');
 
-    if (track && prevButton && nextButton && dots.length) {
+    if (resultsTrack && resultsPrev && resultsNext) {
+        const slides = Array.from(resultsTrack.querySelectorAll('.result-slide'));
         let currentSlide = 0;
-        const totalSlides = dots.length;
 
-        const renderSlide = () => {
-            track.style.transform = `translateX(-${currentSlide * 100}%)`;
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('is-active', index === currentSlide);
-            });
+        const renderResultSlide = () => {
+            resultsTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
         };
 
-        prevButton.addEventListener('click', () => {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            renderSlide();
+        resultsPrev.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            renderResultSlide();
         });
 
-        nextButton.addEventListener('click', () => {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            renderSlide();
+        resultsNext.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            renderResultSlide();
         });
 
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                currentSlide = index;
-                renderSlide();
+        renderResultSlide();
+    }
+
+    if (videos.length) {
+        const stopVideo = (video) => {
+            video.pause();
+            if (video.currentTime > 0) {
+                video.currentTime = 0;
+            }
+        };
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting || entry.intersectionRatio < 0.35) {
+                        stopVideo(entry.target);
+                    }
+                });
+            }, {
+                threshold: [0, 0.35, 0.6]
             });
-        });
 
-        renderSlide();
+            videos.forEach((video) => observer.observe(video));
+        } else {
+            window.addEventListener('scroll', () => {
+                videos.forEach((video) => {
+                    const rect = video.getBoundingClientRect();
+                    const visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+                    const visibilityRatio = Math.max(0, visibleHeight) / Math.max(rect.height, 1);
+                    if (visibilityRatio < 0.35) {
+                        stopVideo(video);
+                    }
+                });
+            }, { passive: true });
+        }
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                videos.forEach(stopVideo);
+            }
+        });
     }
 });
 
