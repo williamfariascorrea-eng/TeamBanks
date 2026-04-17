@@ -10,3 +10,4 @@ node_modules/
 .venv/
 *.log
 Fotos/
+_hostgator_upload/

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -52,7 +52,7 @@
 
     <!-- Header -->
     <nav id="main-nav" class="fixed top-0 z-[100] w-full border-b border-white/5 bg-[#030712]/60 backdrop-blur-2xl transition-all duration-500">
-        <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-5">
+        <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-3">
             <a href="#home" class="flex items-center gap-3">
                 <span class="brand-mark flex h-11 w-11 items-center justify-center overflow-hidden rounded-2xl border border-brand-ice/30 bg-brand-ice/10 shadow-brand sm:h-12 sm:w-12">
                     <img src="media/logo-teambanks-v2.png" alt="Logo TeamBanks" class="brand-mark-image h-full w-full object-cover">
@@ -72,7 +72,7 @@
             </div>
 
             <div class="flex items-center gap-4">
-                <a href="https://wa.me/5553999134166?text=Quero%20fazer%20parte%20do%20melhor%20time%20da%20atualidade%21" target="_blank" class="hidden shrink-0 rounded-full bg-brand-ice px-6 py-2.5 text-xs font-bold uppercase tracking-[0.15em] text-brand-black transition-all hover:scale-105 hover:shadow-brand animate-pulse-slow sm:block sm:text-sm">
+                <a href="https://wa.me/5553999134166?text=Quero%20fazer%20parte%20do%20melhor%20time%20da%20atualidade%21" target="_blank" rel="noopener noreferrer" class="hidden shrink-0 rounded-full bg-brand-ice px-6 py-2.5 text-xs font-bold uppercase tracking-[0.15em] text-brand-black transition-all hover:scale-105 hover:shadow-brand animate-pulse-slow sm:block sm:text-sm">
                     WhatsApp
                 </a>
                 
@@ -84,7 +84,7 @@
         </div>
 
         <!-- Menu Mobile Overlay -->
-        <div id="mobile-menu" class="absolute left-0 top-full w-full border-b border-white/5 bg-[#030712]/95 p-8 backdrop-blur-2xl transition-all duration-300 opacity-0 pointer-events-none -translate-y-4 md:hidden">
+        <div id="mobile-menu" class="absolute left-0 top-full w-full border-b border-white/5 bg-[#030712]/95 p-4 backdrop-blur-2xl transition-all duration-300 opacity-0 pointer-events-none -translate-y-4 md:hidden">
             <div class="flex flex-col gap-8 text-center text-[11px] font-bold uppercase tracking-[0.3em] text-slate-400">
                 <a href="#home" class="mobile-link py-2">In&iacute;cio</a>
                 <a href="#metodo" class="mobile-link py-2">M&eacute;todo</a>
@@ -99,7 +99,7 @@
 
     <main>
         <!-- Hero -->
-        <section id="home" class="px-6 pb-32 pt-44 md:pb-40 md:pt-52">
+        <section id="home" class="px-6 pb-32 pt-40 md:pb-40 md:pt-52">
             <div class="mx-auto grid max-w-7xl items-start gap-12 xl:gap-16 lg:grid-cols-[minmax(0,1.15fr)_22rem] xl:grid-cols-[minmax(0,1.1fr)_24rem]">
                 <div data-aos="fade-up">
                     <span class="inline-flex rounded-full border border-brand-ice/20 bg-brand-ice/5 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.25em] text-brand-ice">
@@ -114,7 +114,7 @@
                     </p>
 
                     <div class="mt-10 flex flex-col gap-5 sm:flex-row">
-                        <a href="https://wa.me/5553999134166?text=Quero%20fazer%20parte%20do%20melhor%20time%20da%20atualidade%21" target="_blank" class="rounded-xl bg-brand-ice px-8 py-4 text-center text-xs font-bold uppercase tracking-[0.15em] text-brand-black transition-all hover:-translate-y-1 hover:shadow-glow sm:text-sm">
+                        <a href="https://wa.me/5553999134166?text=Quero%20fazer%20parte%20do%20melhor%20time%20da%20atualidade%21" target="_blank" rel="noopener noreferrer" class="rounded-xl bg-brand-ice px-8 py-4 text-center text-xs font-bold uppercase tracking-[0.15em] text-brand-black transition-all hover:-translate-y-1 hover:shadow-glow sm:text-sm">
                             Quero minha consultoria
                         </a>
                         <a href="#consultoria" class="rounded-xl border border-white/10 bg-white/5 px-8 py-4 text-center text-xs font-bold uppercase tracking-[0.15em] text-white transition-all hover:bg-white/10 sm:text-sm">
@@ -455,13 +455,11 @@
                     <article class="consult-card rounded-[1.8rem] p-6">
                         <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-brand-ice">Formato local</p>
                         <h3 class="mt-2 text-xl font-black uppercase">Personal presencial</h3>
-                        <p class="muted-copy mt-4 text-[15px] leading-7">Para quem quer acompanhamento ao vivo com frequ&ecirc;ncia definida por semana.</p>
-                        <ul class="muted-copy mt-6 space-y-3 text-xs uppercase tracking-[0.16em]">
-                            <li>2x por semana - R$ 400,00</li>
-                            <li>3x por semana - R$ 500,00</li>
-                            <li>4x por semana - R$ 600,00</li>
-                            <li>5x por semana - R$ 700,00</li>
-                        </ul>
+                        <p class="muted-copy mt-4 text-[15px] leading-7">Para quem quer acompanhamento ao vivo com frequ&ecirc;ncia definida por semana. Treinamento premium com metodologia exclusiva.</p>
+                        <div class="mt-6 rounded-2xl border border-brand-ice/20 bg-brand-ice/10 p-4">
+                            <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-brand-soft">Investimento</p>
+                            <p class="mt-2 text-base font-bold">Personalizado conforme seu plano e objetivos</p>
+                        </div>
                     </article>
 
                     <article class="consult-card rounded-[1.8rem] p-6">
@@ -490,50 +488,123 @@
                 <p class="muted-copy mx-auto mt-5 max-w-2xl text-base leading-7 md:text-lg">
                     Se voc&ecirc; quer parar de treinar no escuro e seguir um plano com acompanhamento real, a pr&oacute;xima vaga pode ser sua.
                 </p>
-                <a href="https://wa.me/5553999134166?text=Quero%20fazer%20parte%20do%20melhor%20time%20da%20atualidade%21" target="_blank" class="mt-8 inline-flex rounded-xl bg-brand-ice px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] text-brand-black transition-all hover:-translate-y-1 hover:shadow-glow sm:text-sm">
+                <a href="https://wa.me/5553999134166?text=Quero%20fazer%20parte%20do%20melhor%20time%20da%20atualidade%21" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex rounded-xl bg-brand-ice px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] text-brand-black transition-all hover:-translate-y-1 hover:shadow-glow sm:text-sm">
                     Quero entrar para o TeamBanks
                 </a>
             </div>
         </section>
 
-        <!-- Pricing -->
+<!-- Premium Investment -->
         <section id="planos" class="px-6 py-32 md:py-40">
             <div class="mx-auto max-w-7xl">
                 <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between" data-aos="fade-up">
                     <div class="max-w-3xl">
-                        <span class="section-kicker font-semibold uppercase text-brand-ice">Planos de investimento</span>
+                        <span class="section-kicker font-semibold uppercase text-brand-ice">Investimento premium</span>
                         <h2 class="mt-4 text-3xl font-black uppercase leading-tight md:text-5xl">
-                            Valores apresentados
-                            <span class="block text-brand-ice">como produto de alto n&iacute;vel.</span>
+                            Valor exclusivo
+                            <span class="block text-brand-ice">para resultados premium.</span>
                         </h2>
                     </div>
-                    <a href="https://wa.me/5553999134166?text=Quero%20fazer%20parte%20do%20melhor%20time%20da%20atualidade%21" target="_blank" class="rounded-full border border-white/10 bg-white/5 px-6 py-3 text-xs font-black uppercase tracking-[0.2em] text-white transition hover:border-brand-ice/40 hover:text-brand-ice sm:text-sm">
-                        Solicitar vaga
+                    <a href="https://wa.me/5553999134166?text=Quero%20fazer%20parte%20do%20melhor%20time%20da%20atualidade%21" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/10 bg-white/5 px-6 py-3 text-xs font-black uppercase tracking-[0.2em] text-white transition hover:border-brand-ice/40 hover:text-brand-ice sm:text-sm">
+                        Falar com especialista
                     </a>
                 </div>
 
-                <div class="mt-16 grid gap-6 lg:grid-cols-4">
-                    <article class="pricing-card rounded-[1.8rem] p-6" data-aos="fade-up" data-aos-delay="100">
-                        <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-slate-400">Mensal</p>
-                        <p class="brand-display mt-4 text-4xl font-black">R$ 200</p>
-                        <p class="muted-copy mt-3 text-[15px] leading-7">30 dias de acompanhamento online.</p>
-                    </article>
-                    <article class="pricing-card rounded-[1.8rem] p-6" data-aos="fade-up" data-aos-delay="200">
-                        <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-slate-400">Trimestral</p>
-                        <p class="brand-display mt-4 text-4xl font-black">R$ 450</p>
-                        <p class="muted-copy mt-3 text-[15px] leading-7">Mais continuidade com economia no per&iacute;odo.</p>
-                    </article>
-                    <article class="pricing-card rounded-[1.8rem] p-6" data-aos="fade-up" data-aos-delay="300">
-                        <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-slate-400">Semestral</p>
-                        <p class="brand-display mt-4 text-4xl font-black">R$ 850</p>
-                        <p class="muted-copy mt-3 text-[15px] leading-7">Formato para quem quer consolidar resultado com ajuste constante.</p>
-                    </article>
-                    <article class="pricing-card relative overflow-hidden rounded-[1.8rem] p-6 border-brand-ice/50 ring-2 ring-brand-ice/20 shadow-brand" data-aos="fade-up" data-aos-delay="400">
-                        <div class="absolute -right-4 -top-4 rounded-bl-xl bg-brand-ice px-4 py-2 text-[10px] font-bold uppercase text-brand-black">Popular</div>
-                        <p class="text-[11px] font-bold uppercase tracking-[0.28em] text-brand-ice">Anual</p>
-                        <p class="brand-display mt-4 text-4xl font-black">R$ 2.000</p>
-                        <p class="muted-copy mt-3 text-[15px] leading-7">Plano premium para compromisso de longo prazo.</p>
-                    </article>
+                <div class="mt-16 grid gap-8 lg:grid-cols-3">
+                    <div class="premium-offer-card rounded-[2rem] p-8 border-2 border-brand-ice/30 bg-gradient-to-br from-brand-ice/5 via-transparent to-cyan-500/10 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-center">
+                            <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-brand-ice/10 flex items-center justify-center">
+                                <i class="fas fa-crown text-3xl text-brand-ice"></i>
+                            </div>
+                            <h3 class="text-2xl font-black uppercase mb-4">Experi&ecirc;ncia Elite</h3>
+                            <p class="text-base text-slate-400 mb-6">
+                                Acesso completo ao m&eacute;todo TeamBanks com personaliza&ccedil;&atilde;o total e suporte premium para transforma&ccedil;&atilde;o garantida.
+                            </p>
+                            <div class="space-y-3 text-left">
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-check text-brand-ice text-sm"></i>
+                                    <span class="text-sm">Plano individualizado</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-check text-brand-ice text-sm"></i>
+                                    <span class="text-sm">Suporte priorit&aacute;rio</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-check text-brand-ice text-sm"></i>
+                                    <span class="text-sm">Acompanhamento integral</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="premium-offer-card rounded-[2rem] p-8 border-2 border-brand-ice/50 bg-gradient-to-br from-brand-ice/10 via-transparent to-cyan-500/20 backdrop-blur-sm shadow-lg shadow-brand/20" data-aos="fade-up" data-aos-delay="200">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                            <span class="bg-brand-ice text-brand-black px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full">OP&Ccedil;&Atilde;O MAIS POPULAR</span>
+                        </div>
+                        <div class="text-center pt-6">
+                            <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-brand-ice/20 flex items-center justify-center ring-2 ring-brand-ice/30">
+                                <i class="fas fa-gem text-3xl text-brand-ice"></i>
+                            </div>
+                            <h3 class="text-2xl font-black uppercase mb-4">Compromisso Elite</h3>
+                            <p class="text-base text-slate-400 mb-6">
+                                Investimento premium para quem busca resultados excepcionais com acompanhamento direto e metodologia exclusiva.
+                            </p>
+                            <div class="space-y-3 text-left">
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-star text-brand-ice text-sm"></i>
+                                    <span class="text-sm">Acesso VIP ao time</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-star text-brand-ice text-sm"></i>
+                                    <span class="text-sm">Suporte 24h</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-star text-brand-ice text-sm"></i>
+                                    <span class="text-sm">Estrat&eacute;gia exclusiva</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="premium-offer-card rounded-[2rem] p-8 border-2 border-brand-ice/30 bg-gradient-to-br from-brand-ice/5 via-transparent to-cyan-500/10 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-center">
+                            <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-brand-ice/10 flex items-center justify-center">
+                                <i class="fas fa-rocket text-3xl text-brand-ice"></i>
+                            </div>
+                            <h3 class="text-2xl font-black uppercase mb-4">Transforma&ccedil;&atilde;o Premium</h3>
+                            <p class="text-base text-slate-400 mb-6">
+                                Investimento completo para transforma&ccedil;&atilde;o total com suporte premium e resultados garantidos a longo prazo.
+                            </p>
+                            <div class="space-y-3 text-left">
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-award text-brand-ice text-sm"></i>
+                                    <span class="text-sm">Plano premium lifetime</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-award text-brand-ice text-sm"></i>
+                                    <span class="text-sm">Suporte ilimitado</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-award text-brand-ice text-sm"></i>
+                                    <span class="text-sm">Metodologia exclusiva</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-gradient-to-r from-brand-ice/10 to-transparent mx-auto max-w-2xl p-8 rounded-[2rem] border border-brand-ice/20">
+                        <h3 class="text-xl font-black uppercase mb-4">Investimento sob medida</h3>
+                        <p class="text-base text-slate-400 mb-6">
+                            Cada plano &eacute; ajustado para suas necessidades individuais. Valor definido baseado em seu objetivo, 
+                            rotina e compromisso com os resultados.
+                        </p>
+                        <a href="https://wa.me/5553999134166?text=Quero%20fazer%20parte%20do%20melhor%20time%20da%20atualidade%21" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-brand-ice px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] text-brand-black transition-all hover:-translate-y-1 hover:shadow-glow sm:text-sm">
+                            <i class="fas fa-comments"></i>
+                            Receber proposta personalizada
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -578,7 +649,7 @@
                         </button>
                         <div class="faq-content max-h-0 overflow-hidden">
                             <div class="muted-copy px-8 pb-6 text-[15px] leading-7">
-                                Sim. O site mostra tamb&eacute;m os formatos presenciais com frequ&ecirc;ncia semanal e faixa de investimento mensal.
+                                Sim. Oferecemos treinamento presencial com frequ&ecirc;ncia definida por semana. O investimento &eacute; customizado conforme seu plano e objetivos.
                             </div>
                         </div>
                     </div>
@@ -607,7 +678,7 @@
     </section>
 
     <!-- Floating WhatsApp -->
-    <a href="https://wa.me/5553999134166?text=Quero%20fazer%20parte%20do%20melhor%20time%20da%20atualidade%21" target="_blank" class="fixed bottom-6 right-6 z-[100] flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-3xl text-white shadow-[0_14px_34px_rgba(37,211,102,0.35)] transition hover:scale-110">
+    <a href="https://wa.me/5553999134166?text=Quero%20fazer%20parte%20do%20melhor%20time%20da%20atualidade%21" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-[100] flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-3xl text-white shadow-[0_14px_34px_rgba(37,211,102,0.35)] transition hover:scale-110">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -624,7 +695,7 @@
                 <a href="#resultados" class="transition hover:text-brand-ice">Resultados</a>
                 <a href="#consultoria" class="transition hover:text-brand-ice">Consultoria</a>
                 <a href="#planos" class="transition hover:text-brand-ice">Planos</a>
-                <a href="https://www.instagram.com/treinador.banks/" target="_blank" class="transition hover:text-brand-ice">Instagram</a>
+                <a href="https://www.instagram.com/treinador.banks/" target="_blank" rel="noopener noreferrer" class="transition hover:text-brand-ice">Instagram</a>
             </div>
         </div>
     </footer>
