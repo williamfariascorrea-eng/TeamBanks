@@ -1,13 +1,15 @@
-.vscode/
-.idea/
-launch.json
-tasks.json
-__pycache__/
-*.pyc
-.DS_Store
-Thumbs.db
+# Dependências
 node_modules/
 .venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Sistema e Logs
+.DS_Store
+Thumbs.db
 *.log
-Fotos/
-_hostgator_upload/

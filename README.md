@@ -1,66 +1,99 @@
-# TeamBanks
+# 🏋️ TeamBanks - Servidor Local
 
-Landing page estatica da consultoria TeamBanks.
+## 📋 Sobre
+Este projeto fornece um servidor local para visualizar o site TeamBanks com as melhores opções de desenvolvimento.
 
-## Stack
+## 🚀 Como Executar
 
-- HTML
-- CSS
-- JavaScript
-- Tailwind CSS via CDN
-- AOS
-- Font Awesome
+### Opção 1: Execução Rápida (Windows)
+```bash
+# Simplesmente execute:
+start.bat
+```
 
-## Estrutura
+### Opção 2: Execução Manual
+```bash
+# Com Python (recomendado):
+python main.py
 
-- `index.html`: pagina principal
-- `style.css`: estilos complementares
-- `script.js`: interacoes da pagina
-- `media/`: imagens e videos publicados
-- `.htaccess`: regras Apache/cPanel para seguranca e cache
-- `HOSTGATOR-DEPLOY.md`: guia de deploy no HostGator
-- `scripts/build-hostgator-package.ps1`: gera `_hostgator_upload/` com apenas os arquivos publicaveis
-- `server.py`: servidor local simples para visualizacao
+# Ou diretamente com o servidor Python:
+python server.py
 
-## Rodar localmente
-
-Opcao 1:
-
-```powershell
-npm install
+# Ou com Node.js/Browser-sync:
 npm start
 ```
 
-Opcao 2:
+## 🎮 Funcionalidades
 
-```powershell
-python -m http.server 3000
+### ✅ Browser-sync (Melhor Opção)
+- 🔄 Recarregamento automático do navegador
+- 📱 Suporte para dispositivos móveis
+- 🔧 Hot-reload para HTML, CSS e JS
+- 🌐 Abre automaticamente o navegador
+
+### ✅ Servidor Python (Alternativa)
+- 🐍 Requer apenas Python
+- ⚡ Leve e rápido
+- 🔒 Execução local segura
+
+## 📋 Requisitos
+
+### Para Browser-sync (Recomendado):
+- Node.js instalado
+- npm (vem com Node.js)
+
+### Para Servidor Python (Alternativa):
+- Python 3.x instalado
+- Módulo embutido http.server
+
+## 🔧 Configuração
+
+### Porta Padrão: 3000
+O servidor rodará em: http://localhost:3000
+
+### Alterar Porta
+No arquivo `main.py`, altere a linha:
+```python
+PORT = 3000  # ou outra porta disponível
 ```
 
-Depois abra `http://localhost:3000`.
+## 🌐 Acesso Após Execução
 
-## Deploy no Render
+O servidor irá:
+1. 🖥️ Abrir automaticamente o navegador
+2. 📱 Mostrar o site TeamBanks
+3. 🔄 Recarregar automaticamente (se usar Browser-sync)
+4. 🛑 Parar com Ctrl+C
 
-O projeto tambem pode ser publicado como site estatico:
+## 🐛 Solução de Problemas
 
-1. Conecte o repositorio no Render.
-2. Deixe `Build Command` em branco.
-3. Use `.` como `Publish Directory`.
+### "Python não encontrado"
+- Instale o Python 3.x: https://python.org
+- Adicione ao PATH durante a instalação
 
-## Deploy no HostGator
+### "Node.js não encontrado"
+- Instale o Node.js: https://nodejs.org
+- Ou use apenas o servidor Python
 
-Consulte `HOSTGATOR-DEPLOY.md`.
+### "Porta 3000 em uso"
+- Altere a porta no código
+- ou mate o processo na porta: `netstat -ano | findstr :3000`
 
-Para gerar uma pasta pronta para upload:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\build-hostgator-package.ps1
+## 📁 Estrutura de Arquivos
+```
+Banks/
+├── index.html      # Site principal
+├── style.css       # Estilos
+├── script.js       # JavaScript
+├── main.py        # Servidor inteligente
+├── start.bat      # Execução Windows
+├── server.py      # Servidor Python
+├── package.json   # Configuração Node.js
+└── README.md      # Este arquivo
 ```
 
-Isso gera `_hostgator_upload/` com:
-
-- `index.html`
-- `style.css`
-- `script.js`
-- `.htaccess`
-- `media/`
+## 🎯 Dicas
+- Use `start.bat` para execução fácil no Windows
+- O Browser-sync é a melhor opção para desenvolvimento
+- O servidor Python funciona como alternativa rápida
+- Altere a porta se necessário no código
