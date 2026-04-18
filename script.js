@@ -1,4 +1,33 @@
-﻿document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
+    
+    // Enhanced Mouse Parallax Effect
+    const heroSection = document.querySelector('#home, section[id^="home"]');
+    const glowElements = document.querySelectorAll('.hero-mesh + div, [class*="blur-"]');
+    let mouseX = 0;
+    let mouseY = 0;
+    
+    document.addEventListener('mousemove', (e) => {
+        mouseX = (e.clientX / window.innerWidth - 0.5) * 20;
+        mouseY = (e.clientY / window.innerHeight - 0.5) * 20;
+        
+        // Apply parallax to background glows
+        const glows = document.querySelectorAll('.hero-mesh + div [class*="blur-"]');
+        glows.forEach((glow, index) => {
+            const speed = (index + 1) * 0.5;
+            glow.style.transform = `translate(${mouseX * speed}px, ${mouseY * speed}px)`;
+        });
+    });
+    
+    // Smooth glow animation on hover
+    document.querySelectorAll('.glass-card, .feature-card, .consult-card').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width - 0.5;
+            const y = (e.clientY - rect.top) / rect.height - 0.5;
+            card.style.setProperty('--mouse-x', `${x * 20}px`);
+            card.style.setProperty('--mouse-y', `${y * 20}px`);
+        });
+    });
     if (window.AOS) {
         AOS.init({
             duration: 900,

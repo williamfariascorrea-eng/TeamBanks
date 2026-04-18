@@ -53,43 +53,215 @@ body {
     50% { opacity: 0.8; transform: scale(1.02); }
 }
 
+/* CTA Button with gradient and shine effect */
+.cta-button {
+    background: linear-gradient(135deg, #7dd3fc 0%, #38bdf8 50%, #22d3ee 100%);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.cta-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.4), 0 0 20px rgba(125, 211, 252, 0.3);
+}
+
+/* Secondary CTA with accent color on hover */
+.cta-button-secondary {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+}
+
+.cta-button-secondary:hover {
+    background: linear-gradient(135deg, rgba(125, 211, 252, 0.15), rgba(255, 255, 255, 0.1));
+    border-color: #7dd3fc;
+    box-shadow: 0 0 20px rgba(125, 211, 252, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Premium CTA with orange accent */
+.cta-button-premium {
+    background: linear-gradient(135deg, #f97316 0%, #fb923c 50%, #fdba74 100%);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.cta-button-premium::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.cta-button-premium:hover::before {
+    left: 100%;
+}
+
+.cta-button-premium:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(249, 115, 22, 0.4), 0 0 25px rgba(249, 115, 22, 0.3);
+}
+
+/* Vibrant interactive elements */
+.interactive-glow {
+    transition: all 0.3s ease;
+}
+
+.interactive-glow:hover {
+    box-shadow: 0 0 25px rgba(125, 211, 252, 0.3), 0 0 50px rgba(125, 211, 252, 0.1);
+}
+
+.interactive-glow-orange:hover {
+    box-shadow: 0 0 25px rgba(249, 115, 22, 0.3), 0 0 50px rgba(249, 115, 22, 0.1);
+}
+
 h1, h2, h3, .brand-display {
     letter-spacing: -0.02em;
 }
 
-/* Background */
+/* Enhanced Background with Particles and Lines */
 .hero-mesh {
     background:
-        radial-gradient(circle at 10% 10%, rgba(125, 211, 252, 0.05), transparent 40%),
-        radial-gradient(circle at 90% 90%, rgba(56, 189, 248, 0.05), transparent 40%),
+        radial-gradient(circle at 10% 10%, rgba(125, 211, 252, 0.08), transparent 40%),
+        radial-gradient(circle at 90% 90%, rgba(56, 189, 248, 0.06), transparent 40%),
         linear-gradient(180deg, #030712 0%, #050b18 100%);
+    position: relative;
 }
 
+/* Animated particles using CSS only */
+.hero-mesh::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: 
+        radial-gradient(circle, rgba(125,211,252,0.4) 1px, transparent 1px),
+        radial-gradient(circle, rgba(249,115,22,0.3) 2px, transparent 2px),
+        radial-gradient(circle, rgba(139,92,246,0.25) 1.5px, transparent 1.5px);
+    background-size: 50px 50px, 80px 80px, 120px 120px;
+    background-position: 0 0, 20px 20px, 40px 40px;
+    animation: mesh-move 25s ease-in-out infinite;
+    opacity: 0.5;
+}
+
+@keyframes mesh-move {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(10px, 10px); }
+}
+
+/* Dynamic geometric lines */
+.hero-mesh::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background: 
+        linear-gradient(90deg, transparent 49.5%, rgba(125,211,252,0.08) 50%, transparent 50.5%),
+        linear-gradient(0deg, transparent 49.5%, rgba(125,211,252,0.05) 50%, transparent 50.5%);
+    background-size: 100px 100px;
+    opacity: 0.4;
+    animation: lines-move 20s linear infinite;
+}
+
+@keyframes lines-move {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100px); }
+}
+
+/* Body background pattern */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
     pointer-events: none;
     background-image: 
-        radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
-    background-size: 40px 40px;
-    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.28), transparent 18%, transparent 82%, rgba(0, 0, 0, 0.28));
-    opacity: 0.35;
+        radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px),
+        radial-gradient(circle, rgba(125, 211, 252, 0.1) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(125, 211, 252, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(125, 211, 252, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px, 80px 80px, 60px 60px, 60px 60px;
+    background-position: 0 0, 20px 20px, 0 0, 30px 30px;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4), transparent 15%, transparent 85%, rgba(0, 0, 0, 0.4));
+    opacity: 0.6;
     z-index: -1;
+    animation: pattern-shift 30s ease-in-out infinite;
 }
 
-/* Shared cards */
+@keyframes pattern-shift {
+    0%, 100% { background-position: 0 0, 20px 20px, 0 0, 30px 30px; }
+    50% { background-position: 8px 8px, 28px 28px, 8px 8px, 38px 38px; }
+}
+
+/* Enhanced Glassmorphism with Refraction */
 .glass-card,
 .feature-card,
 .consult-card,
 .pricing-card,
 .showcase-panel {
-    background: linear-gradient(165deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.02), 0 20px 40px -20px rgba(0,0,0,0.7);
+    background: 
+        linear-gradient(165deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)),
+        radial-gradient(circle at 30% 30%, rgba(125, 211, 252, 0.08), transparent 50%);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 
+        inset 0 2px 4px rgba(255, 255, 255, 0.08),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.15),
+        0 20px 40px -20px rgba(0,0,0,0.7);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Refraction shine effect */
+.glass-card::after,
+.feature-card::after,
+.consult-card::after,
+.pricing-card::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.04) 50%,
+        transparent 70%
+    );
+    transform: rotate(45deg) translateX(-100%);
+    animation: refraction 10s infinite linear;
+    pointer-events: none;
+}
+
+@keyframes refraction {
+    0% { transform: rotate(45deg) translateX(-100%); }
+    100% { transform: rotate(45deg) translateX(100%); }
 }
 
 .glass-card,
@@ -102,9 +274,12 @@ body::before {
 
 .premium-offer-card:hover {
     transform: translateY(-8px);
-    border-color: rgba(125, 211, 252, 0.5);
-    background: linear-gradient(165deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
-    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.6), 0 0 25px rgba(125, 211, 252, 0.15);
+    border-color: rgba(125, 211, 252, 0.6);
+    background: linear-gradient(165deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04));
+    box-shadow: 
+        0 30px 60px -15px rgba(0, 0, 0, 0.6), 
+        0 0 30px rgba(125, 211, 252, 0.2),
+        inset 0 2px 0 rgba(255, 255, 255, 0.1);
 }
 
 .glass-card:hover,
@@ -112,9 +287,12 @@ body::before {
 .consult-card:hover,
 .pricing-card:hover {
     transform: translateY(-6px);
-    border-color: rgba(125, 211, 252, 0.3);
-    background: linear-gradient(165deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 15px rgba(125, 211, 252, 0.1);
+    border-color: rgba(125, 211, 252, 0.4);
+    background: linear-gradient(165deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+    box-shadow: 
+        0 25px 50px -12px rgba(0, 0, 0, 0.5), 
+        0 0 20px rgba(125, 211, 252, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 /* Media blocks */
