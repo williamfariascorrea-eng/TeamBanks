@@ -83,8 +83,8 @@
         <div class="absolute bottom-0 right-0 h-[30rem] w-[30rem] rounded-full bg-cyan-600/5 blur-[120px]"></div>
     </div>
 
-    <!-- Cabecalho -->
-    <div class="fixed top-0 z-[100] w-full">
+<!-- Cabecalho -->
+    <div class="lg:fixed top-0 z-[100] w-full">
         <nav id="main-nav" class="w-full border-b border-white/5 bg-[#030712]/60 backdrop-blur-2xl transition-all duration-500 relative">
             <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-3">
                 <a href="#home" class="flex items-center gap-3">
@@ -102,7 +102,7 @@
                     <a href="#resultados" class="rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 transition-all hover:bg-brand-ice hover:text-brand-black">Resultados</a>
                     <a href="#consultoria" class="rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 transition-all hover:bg-brand-ice hover:text-brand-black">Consultoria</a>
                     <a href="#planos" class="rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 transition-all hover:bg-brand-ice hover:text-brand-black">Planos</a>
-                    <a href="#faq" class="rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 transition-all hover:bg-brand-ice hover:text-brand-black">Perguntas</a>
+<a href="#faq" class="rounded-full px-5 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 transition-all hover:bg-brand-ice hover:text-brand-black">Perguntas</a>
                 </div>
 
                 <div class="flex items-center gap-3">
@@ -110,28 +110,25 @@
                         <i class="fab fa-whatsapp"></i>
                         <span class="hidden sm:inline">WhatsApp</span>
                     </a>
-                    
-                    <!-- Botao do menu mobile -->
                     <button id="mobile-menu-toggle" class="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white transition-all active:scale-90 md:hidden">
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>
             </div>
-
-<!-- Menu mobile -->
-            <div id="mobile-menu" class="hidden fixed top-[70px] left-0 w-full border-b border-white/5 bg-[#030712]/95 backdrop-blur-2xl md:hidden z-50" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
-                <div class="flex flex-col gap-1 text-center text-[11px] font-bold uppercase tracking-[0.3em] text-slate-400 p-4">
-                    <a href="#home" class="mobile-link py-3">In&iacute;cio</a>
-                    <a href="#metodo" class="mobile-link py-3">M&eacute;todo</a>
-                    <a href="#resultados" class="mobile-link py-3">Resultados</a>
-                    <a href="#consultoria" class="mobile-link py-3">Consultoria</a>
-                    <a href="#planos" class="mobile-link py-3">Planos</a>
-                    <a href="#faq" class="mobile-link py-3">Perguntas</a>
-                    <a href="https://wa.me/5553999134166?text=Quero%20fazer%20parte%20do%20melhor%20time%20da%20atualidade%21" class="mt-2 rounded-xl bg-brand-ice py-4 text-brand-black">WhatsApp</a>
-                </div>
-            </div>
         </nav>
     </div>
+
+    <div id="mobile-menu" class="hidden border-b border-white/5 bg-[#030712]/95 backdrop-blur-2xl md:hidden" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+        <div class="flex flex-col gap-1 text-center text-[11px] font-bold uppercase tracking-[0.3em] text-slate-400 p-4">
+            <a href="#home" class="mobile-link py-3">In&iacute;cio</a>
+            <a href="#metodo" class="mobile-link py-3">M&eacute;todo</a>
+            <a href="#resultados" class="mobile-link py-3">Resultados</a>
+            <a href="#consultoria" class="mobile-link py-3">Consultoria</a>
+            <a href="#planos" class="mobile-link py-3">Planos</a>
+            <a href="#faq" class="mobile-link py-3">Perguntas</a>
+            <a href="https://wa.me/5553999134166?text=Quero%20fazer%20parte%20do%20melhor%20time%20da%20atualidade%21" class="mt-2 rounded-xl bg-brand-ice py-4 text-brand-black">WhatsApp</a>
+        </div>
+</div>
 
     <main>
         <!-- Inicio -->
