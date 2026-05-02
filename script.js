@@ -1,4 +1,103 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Anti-copia e segurança
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        return false;
+    }, false);
+
+    document.addEventListener('keydown', function(e) {
+        // Disable Ctrl+C, Ctrl+U, Ctrl+S, Ctrl+P, F12
+        if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S' || e.key === 'p' || e.key === 'P')) {
+            e.preventDefault();
+            return false;
+        }
+        // Disable F12
+        if (e.key === 'F12') {
+            e.preventDefault();
+            return false;
+        }
+        // Disable Ctrl+Shift+I (Developer Tools)
+        if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+            e.preventDefault();
+            return false;
+        }
+        // Disable Ctrl+Shift+J (Console)
+        if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+            e.preventDefault();
+            return false;
+        }
+        // Disable Ctrl+Shift+C (Inspector)
+        if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+            e.preventDefault();
+            return false;
+        }
+    }, false);
+
+    // Disable drag and drop
+    document.addEventListener('dragstart', function(e) {
+        e.preventDefault();
+        return false;
+    }, false);
+
+    document.addEventListener('drop', function(e) {
+        e.preventDefault();
+        return false;
+    }, false);
+
+    document.addEventListener('copy', function(e) {
+        e.preventDefault();
+        return false;
+    }, false);
+
+    // Disable selection
+    document.addEventListener('selectstart', function(e) {
+        e.preventDefault();
+        return false;
+    }, false);
+
+    // Disable cut
+    document.addEventListener('cut', function(e) {
+        e.preventDefault();
+        return false;
+    }, false);
+
+    // Disable paste
+    document.addEventListener('paste', function(e) {
+        e.preventDefault();
+        return false;
+    }, false);
+
+    // Disable iframe embedding
+    if (window.top !== window.self) {
+        window.top.location.href = window.self.location.href;
+    }
+
+    // Disable right-click on images
+    document.addEventListener('contextmenu', function(e) {
+        const img = e.target;
+        if (img.tagName === 'IMG') {
+            e.preventDefault();
+            return false;
+        }
+    }, false);
+
+    // Disable keyboard print screen
+    document.addEventListener('keyup', function(e) {
+        if (e.key === 'PrintScreen') {
+            navigator.clipboard.writeText('');
+        }
+    }, false);
+
+    // Disable developer tools detection
+    setInterval(function() {
+        const width = window.outerWidth - window.innerWidth;
+        const height = window.outerHeight - window.innerHeight;
+        if (width > 100 || height > 100) {
+            document.body.style.display = 'none';
+            document.documentElement.innerHTML = '';
+        }
+    }, 1000);
+
     if (window.AOS) {
         AOS.init({
             duration: 900,
