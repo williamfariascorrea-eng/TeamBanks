@@ -88,15 +88,17 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }, false);
 
-    // Disable developer tools detection
+    // Disable developer tools detection (simplified - just detect very large sizes)
+    let devToolsWarningShown = false;
     setInterval(function() {
         const width = window.outerWidth - window.innerWidth;
         const height = window.outerHeight - window.innerHeight;
-        if (width > 100 || height > 100) {
-            document.body.style.display = 'none';
-            document.documentElement.innerHTML = '';
+        // Only show warning, don't hide content (too aggressive)
+        if ((width > 200 || height > 200) && !devToolsWarningShown) {
+            console.log('DevTools detected');
+            devToolsWarningShown = true;
         }
-    }, 1000);
+    }, 2000);
 
     if (window.AOS) {
         AOS.init({
